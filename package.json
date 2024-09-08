@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Alexander-1994/webpack_course#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   }
