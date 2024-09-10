@@ -1,0 +1,1 @@
+.counters{display:flex;justify-content:center;column-gap:50px}.counters__item{padding:15px;border:2px solid blue;border-radius:15px}.counters__title,.counters__value{text-align:center}.counters__value{color:red}
