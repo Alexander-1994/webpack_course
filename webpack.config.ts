@@ -14,7 +14,7 @@ export default (env: TEnv) => {
 
   const config: Configuration = {
     mode: env.mode ?? EMode.DEVELOPMENT,
-    entry: path.resolve(__dirname, 'src', 'index.ts'),
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
       path: path.resolve(__dirname, 'build'),
       filename: 'bundle.[contenthash].js',
