@@ -1,3 +1,3 @@
-import './styles.sass';
+import classes from './Loader.module.sass';
 
-export const Loader = () => <div className="loader">Loading...</div>;
+export const Loader = () => <div className={classes.loader}>Loading...</div>;
