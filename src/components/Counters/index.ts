@@ -1,1 +1,1 @@
-export { Counters as default } from './Counters';
+export { Counters } from './Counters';

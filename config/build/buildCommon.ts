@@ -14,7 +14,7 @@ export const buildCommon = (options: TBuildOptions) => {
     entry: paths.entry,
     output: {
       path: paths.output,
-      filename: 'js/bundle.[contenthash].js',
+      filename: 'js/bundle.[name].js',
       clean: true,
     },
     plugins: buildPlugins(options),

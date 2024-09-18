@@ -6,7 +6,7 @@ type TPaths = {
   html: string;
 };
 
-export type TEnvVariables = { mode?: EMode; port?: number };
+export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean };
 
 export type TBuildOptions = Required<TEnvVariables> & {
   paths: TPaths;

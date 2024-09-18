@@ -5,4 +5,5 @@ import type { TBuildOptions } from './common';
 export const buildDevServer = ({ port }: TBuildOptions): DevServerConfiguration => ({
   port,
   open: true,
+  historyApiFallback: true,
 });
