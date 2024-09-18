@@ -15,3 +15,7 @@ This is a repository with a step-by-step Webpack setup from simple to complex.
 ## version: "1.2.1"
 
 > React/TS/SCSS(SASS) + CSS modules
+
+## version: "1.2.2"
+
+> React/TS/SCSS(SASS)/CSS modules/ + React Router
