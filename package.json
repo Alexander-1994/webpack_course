@@ -1,6 +1,6 @@
 {
   "name": "webpack_course",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "This is a repository with a step-by-step Webpack setup from simple to complex",
   "main": "index.js",
   "scripts": {
