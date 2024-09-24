@@ -18,4 +18,8 @@ This is a repository with a step-by-step Webpack setup from simple to complex.
 
 ## version: "1.2.2"
 
-> React/TS/SCSS(SASS)/CSS modules/ + React Router
+> React/TS/SCSS(SASS)/CSS modules + React Router
+
+## version: "1.2.3"
+
+> React/TS/SCSS(SASS)/CSS modules/React Router + path aliases
