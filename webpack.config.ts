@@ -10,6 +10,7 @@ export default ({ mode, port, analyzer }: TEnvVariables) =>
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       output: path.resolve(__dirname, 'build'),
       html: path.resolve(__dirname, 'public', 'index.html'),
+      src: path.resolve(__dirname, 'src'),
     },
     isDev: mode === EMode.DEVELOPMENT,
     isProd: mode === EMode.PRODUCTION,

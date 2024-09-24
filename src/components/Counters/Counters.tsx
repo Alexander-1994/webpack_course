@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
-import { context, type TContext, EActionType } from '../../common';
+import { context, type TContext, EActionType } from '@/common';
+
 import classes from './Counters.module.sass';
 
 export const Counters = () => {

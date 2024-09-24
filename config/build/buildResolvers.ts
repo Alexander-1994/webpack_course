@@ -1,5 +1,10 @@
 import { Configuration } from 'webpack';
 
-export const buildResolvers = (): Configuration['resolve'] => ({
+import { TBuildOptions } from './common';
+
+export const buildResolvers = ({ paths }: TBuildOptions): Configuration['resolve'] => ({
   extensions: ['.tsx', '.ts', '.js'],
+  alias: {
+    '@': paths.src,
+  },
 });

@@ -1,4 +1,5 @@
 import type { Dispatch } from 'react';
+
 import { EActionType } from './constants';
 
 export type TState = {

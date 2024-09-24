@@ -4,6 +4,7 @@ type TPaths = {
   entry: string;
   output: string;
   html: string;
+  src: string;
 };
 
 export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean };

@@ -1,4 +1,4 @@
-import { Container, Counters } from '../../components';
+import { Container, Counters } from '@/components';
 
 const CountersPage = () => (
   <Container>

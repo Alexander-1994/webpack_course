@@ -3,7 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-import { type TBuildOptions, EMode } from './common';
+import { type TBuildOptions } from './common';
 
 export const buildPlugins = ({ paths, isDev, isProd, analyzer }: TBuildOptions) => {
   const plugins: Configuration['plugins'] = [

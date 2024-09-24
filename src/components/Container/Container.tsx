@@ -1,7 +1,8 @@
 import { FC, PropsWithChildren } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
-import { ROUTES } from '../../common';
+import { ROUTES } from '@/common';
+
 import classes from './Container.module.sass';
 
 export const Container: FC<PropsWithChildren> = ({ children }) => {

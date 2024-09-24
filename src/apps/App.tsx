@@ -1,9 +1,9 @@
 import { useReducer, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import { context, reducer, INITIAL_STATE, ROUTES } from '../common';
-import { ErrorBoundary, Loader } from '../components';
-import { LazyHome, LazyCounters } from '../pages';
+import { context, reducer, INITIAL_STATE, ROUTES } from '@/common';
+import { ErrorBoundary, Loader } from '@/components';
+import { LazyHome, LazyCounters } from '@/pages';
 
 export const App = () => {
   const { Provider } = context;
