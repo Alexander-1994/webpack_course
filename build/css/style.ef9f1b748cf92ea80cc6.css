@@ -2,3 +2,4 @@
 .LwWuW{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;font-size:50px}
 .u9P3j{text-align:center;font-size:50px;color:blue}
 .dMVs6{display:flex;justify-content:center;column-gap:50px}.dGFd8{padding:15px;border:2px solid blue;border-radius:15px}.a83Hk,.moxZE{text-align:center}.moxZE{color:red}
+.XOtLY{display:grid;grid-template:minmax(auto, 100px)/repeat(2, 1fr);grid-auto-rows:minmax(auto, 100px);gap:30px}.iDC14,.XOiBB{width:100%;height:100%}.iDC14{object-fit:contain}.I6H0m{text-align:center}.XOiBB{color:red}

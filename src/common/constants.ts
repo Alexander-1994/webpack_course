@@ -15,6 +15,7 @@ export enum EActionType {
 export const ROUTES = {
   MAIN: '/',
   COUNTERS: '/counters',
+  IMAGES: '/images',
   FAKE: '/fake',
   ANY: '*',
 } as const;

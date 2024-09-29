@@ -24,5 +24,25 @@ export const buildLoaders = ({ isDev, isProd }: TBuildOptions): ModuleOptions['r
     exclude: /node_modules/,
   };
 
-  return [sassLoader, tsLoader];
+  const assetLoader: RuleSetRule = {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+  };
+
+  const svgrLoader: RuleSetRule = {
+    test: /\.svg$/i,
+    use: [
+      {
+        loader: '@svgr/webpack',
+        options: {
+          icon: true,
+          svgoConfig: {
+            plugins: [{ name: 'convertColors', params: { currentColor: true } }],
+          },
+        },
+      },
+    ],
+  };
+
+  return [sassLoader, tsLoader, assetLoader, svgrLoader];
 };

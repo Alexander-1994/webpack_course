@@ -1,0 +1,1 @@
+export { StaticImages } from './StaticImages';
