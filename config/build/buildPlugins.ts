@@ -2,6 +2,7 @@ import { Configuration, DefinePlugin, ProgressPlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 import { type TBuildOptions } from './common';
 
@@ -14,6 +15,7 @@ export const buildPlugins = ({ paths, isDev, isProd, analyzer, platform }: TBuil
   ];
 
   isDev && plugins.push(new ProgressPlugin());
+  isDev && plugins.push(new ForkTsCheckerWebpackPlugin());
 
   isProd &&
     plugins.push(

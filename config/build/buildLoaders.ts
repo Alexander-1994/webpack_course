@@ -20,8 +20,15 @@ export const buildLoaders = ({ isDev, isProd }: TBuildOptions): ModuleOptions['r
 
   const tsLoader: RuleSetRule = {
     test: /\.tsx?$/,
-    use: 'ts-loader',
     exclude: /node_modules/,
+    use: [
+      {
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: isDev,
+        },
+      },
+    ],
   };
 
   const assetLoader: RuleSetRule = {
