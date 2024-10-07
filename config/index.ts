@@ -1,1 +1,1 @@
-export { EMode, type TEnvVariables, buildCommon } from './build';
+export { EMode, EPlatform, type TEnvVariables, buildCommon } from './build';

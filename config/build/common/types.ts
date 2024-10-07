@@ -1,4 +1,4 @@
-import { EMode } from './constants';
+import { EMode, EPlatform } from './constants';
 
 type TPaths = {
   entry: string;
@@ -7,7 +7,7 @@ type TPaths = {
   src: string;
 };
 
-export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean };
+export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean; platform?: EPlatform };
 
 export type TBuildOptions = Required<TEnvVariables> & {
   paths: TPaths;
