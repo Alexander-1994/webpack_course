@@ -1,5 +1,6 @@
 import { ModuleOptions, RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshTypeScript from 'react-refresh-typescript';
 
 import type { TBuildOptions } from './common';
 
@@ -26,6 +27,9 @@ export const buildLoaders = ({ isDev, isProd }: TBuildOptions): ModuleOptions['r
         loader: 'ts-loader',
         options: {
           transpileOnly: isDev,
+          getCustomTransformers: () => ({
+            before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+          }),
         },
       },
     ],
