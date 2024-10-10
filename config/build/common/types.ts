@@ -3,9 +3,8 @@ import { EMode, EPlatform } from './constants';
 type TPaths = {
   entry: string;
   output: string;
-  html: string;
+  public: string;
   src: string;
-  favicon: string;
 };
 
 export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean; platform?: EPlatform };

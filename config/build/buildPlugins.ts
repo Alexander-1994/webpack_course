@@ -1,17 +1,19 @@
+import path from 'path';
 import { Configuration, DefinePlugin, ProgressPlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
 
 import { type TBuildOptions } from './common';
 
 export const buildPlugins = ({ paths, isDev, isProd, analyzer, platform }: TBuildOptions) => {
   const plugins: Configuration['plugins'] = [
     new HtmlWebpackPlugin({
-      template: paths.html,
-      favicon: paths.favicon,
+      template: path.resolve(paths.public, 'index.html'),
+      favicon: path.resolve(paths.public, 'favicon.ico'),
     }),
     new DefinePlugin({ __PLATFORM__: JSON.stringify(platform) }),
   ];
@@ -27,6 +29,11 @@ export const buildPlugins = ({ paths, isDev, isProd, analyzer, platform }: TBuil
       new MiniCssExtractPlugin({
         filename: 'css/style.[contenthash].css',
         chunkFilename: 'css/style.[contenthash].css',
+      }),
+    );
+    plugins.push(
+      new CopyPlugin({
+        patterns: [{ from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales') }],
       }),
     );
   }
