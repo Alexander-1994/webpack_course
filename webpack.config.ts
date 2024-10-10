@@ -12,6 +12,7 @@ export default ({ mode, port, analyzer, platform }: TEnvVariables) => {
       entry: path.resolve(__dirname, 'src', 'index.tsx'),
       output: path.resolve(__dirname, 'build'),
       html: path.resolve(__dirname, 'public', 'index.html'),
+      favicon: path.resolve(__dirname, 'public', 'favicon.ico'),
       src: path.resolve(__dirname, 'src'),
     },
     isDev: availableMode === EMode.DEVELOPMENT,

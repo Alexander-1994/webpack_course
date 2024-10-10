@@ -5,6 +5,7 @@ type TPaths = {
   output: string;
   html: string;
   src: string;
+  favicon: string;
 };
 
 export type TEnvVariables = { mode?: EMode; port?: number; analyzer?: boolean; platform?: EPlatform };

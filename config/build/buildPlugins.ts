@@ -11,6 +11,7 @@ export const buildPlugins = ({ paths, isDev, isProd, analyzer, platform }: TBuil
   const plugins: Configuration['plugins'] = [
     new HtmlWebpackPlugin({
       template: paths.html,
+      favicon: paths.favicon,
     }),
     new DefinePlugin({ __PLATFORM__: JSON.stringify(platform) }),
   ];
