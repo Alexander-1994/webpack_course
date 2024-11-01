@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+// import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 
 import { type TBuildOptions } from './common';
@@ -21,7 +21,7 @@ export const buildPlugins = ({ paths, isDev, isProd, analyzer, platform }: TBuil
   if (isDev) {
     plugins.push(new ProgressPlugin());
     plugins.push(new ForkTsCheckerWebpackPlugin());
-    plugins.push(new ReactRefreshWebpackPlugin());
+    // plugins.push(new ReactRefreshWebpackPlugin());
   }
 
   if (isProd) {

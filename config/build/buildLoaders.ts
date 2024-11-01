@@ -1,6 +1,6 @@
 import { ModuleOptions, RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import ReactRefreshTypeScript from 'react-refresh-typescript';
+// import ReactRefreshTypeScript from 'react-refresh-typescript';
 
 import type { TBuildOptions } from './common';
 
@@ -19,17 +19,34 @@ export const buildLoaders = ({ isDev, isProd }: TBuildOptions): ModuleOptions['r
     use: [isDev && 'style-loader', isProd && MiniCssExtractPlugin.loader, sassLoaderWithModules, 'sass-loader'],
   };
 
-  const tsLoader: RuleSetRule = {
+  // const tsLoader: RuleSetRule = {
+  //   test: /\.tsx?$/,
+  //   exclude: /node_modules/,
+  //   use: [
+  //     {
+  //       loader: 'ts-loader',
+  //       options: {
+  //         transpileOnly: isDev,
+  //         getCustomTransformers: () => ({
+  //           before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+  //         }),
+  //       },
+  //     },
+  //   ],
+  // };
+
+  const babelLoader: RuleSetRule = {
     test: /\.tsx?$/,
     exclude: /node_modules/,
     use: [
       {
-        loader: 'ts-loader',
+        loader: 'babel-loader',
         options: {
-          transpileOnly: isDev,
-          getCustomTransformers: () => ({
-            before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
-          }),
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-typescript',
+            ['@babel/preset-react', { runtime: isDev ? 'automatic' : 'classic' }],
+          ],
         },
       },
     ],
@@ -55,5 +72,5 @@ export const buildLoaders = ({ isDev, isProd }: TBuildOptions): ModuleOptions['r
     ],
   };
 
-  return [sassLoader, tsLoader, assetLoader, svgrLoader];
+  return [sassLoader, /* tsLoader, */ babelLoader, assetLoader, svgrLoader];
 };

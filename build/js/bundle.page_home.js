@@ -1,1 +1,1 @@
-"use strict";(self.webpackChunkwebpack_course=self.webpackChunkwebpack_course||[]).push([[312],{452:(e,c,s)=>{s.r(c),s.d(c,{default:()=>n});var u=s(848),r=s(4);const n=function(){return(0,u.jsx)(r.mc,{children:(0,u.jsx)(r.ww,{})})}}}]);
+"use strict";(self.webpackChunkwebpack_course=self.webpackChunkwebpack_course||[]).push([[312],{73:(e,c,t)=>{t.r(c),t.d(c,{default:()=>a});var u=t(117);const a=function(){return React.createElement(u.mc,null,React.createElement(u.ww,null))}}}]);
